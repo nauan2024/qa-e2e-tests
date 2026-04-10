@@ -22,28 +22,22 @@ describe('template spec', () => {
 
     cy.contains("Você precisa de uma senha para entrar! 🔒")
 
-    
-        cy.wait(2000)
+    cy.wait(2000)
 
   })
 
   it('Testes Email Invalido', () => {
     cy.visit('http://localhost:3000/')
     cy.get("#email").type("3dt@gmail")
-    
     cy.contains("Button", "Entrar").click()
-
         cy.wait(2000)
-
   })
 
-   it('Testes Senha Invalido', () => {
+  it('Testes Senha Invalido', () => {
     cy.visit('http://localhost:3000/')
     cy.get("#password").type("5DT")
-    
+
     cy.contains("Button", "Entrar").click()
-
         cy.wait(2000)
-
   })
 })
